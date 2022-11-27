@@ -6,3 +6,7 @@
 - Check availabality of machine using ping module:
 
 `ansible -m ping localhost`
+
+- To Check uptime
+
+`ansible localhost -m shell -a uptime`
