@@ -1,0 +1,9 @@
+---
+- name: "Compressing the Directory with tar and gz"
+  hosts: localhost
+  tasks:
+    - name: "Using Archive Module"
+      archive:
+        path: /home/shubham/Pictures/wallpapers
+        dest: /home/shubham/Pictures/wallpapers.tar.gz
+        format: gz
