@@ -1,0 +1,8 @@
+---
+- name: "default file compress format(.gz)"
+  hosts: localhost
+  tasks:
+    - name: "archive module - default file compress format"
+      archive:
+        path: /home/shubham/Pictures/Screenshot_1.png
+        dest: /home/shubham/Pictures/Screenshot_1.png
