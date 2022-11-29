@@ -1,0 +1,10 @@
+---
+- name: "Compressing the directory with TAR"
+  hosts: localhost
+  tasks:
+    - name: "compress files in directory"
+      become: yes
+      archive:
+        path: /home/shubham/Pictures/wallpapers
+        dest: /home/shubham/Pictures/wallpapers.tar
+        format: tar
