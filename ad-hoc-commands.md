@@ -22,3 +22,11 @@
 - Create a user group:
 
 `ansible localhost  -m group -a "name=newgrp state=present"  -b -K`
+
+- Create a unix user:
+
+`ansible localhost -m user -a "name=newUser group=newUser createhome=yes" -b -K`
+
+- Create a Directory with 777 permission:
+
+`ansible localhost -m file -a "path=/home/shubham/Desktop/newDir state=directory mode=0777" -b -K`
