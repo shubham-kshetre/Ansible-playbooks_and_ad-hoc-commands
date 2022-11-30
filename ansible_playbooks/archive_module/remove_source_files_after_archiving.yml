@@ -1,0 +1,10 @@
+---
+- name: "Archive module to use remove"
+  hosts: localhost
+  tasks:
+    - name: remove archive after compress
+      become: yes
+      archive:
+        path: /home/shubham/Pictures/wallpapers 
+        dest: /home/shubham/Pictures/wallpapers.gz 
+        remove: yes
