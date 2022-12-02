@@ -30,3 +30,7 @@
 - Create a Directory with 777 permission:
 
 `ansible localhost -m file -a "path=/home/shubham/Desktop/newDir state=directory mode=0777" -b -K`
+
+- To check the service status:
+
+`ansible localhost -m service -a "name=httpd"`
