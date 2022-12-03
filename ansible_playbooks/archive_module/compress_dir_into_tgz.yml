@@ -1,0 +1,8 @@
+---
+- name: "compress directory into .tgz"
+  hosts: localhost
+  tasks:
+    - name: "use archive module"
+      community.general.archive:
+        path: /home/user/Documents
+        dest: /home/user/Documents.tgz
