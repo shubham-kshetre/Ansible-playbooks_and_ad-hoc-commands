@@ -1,0 +1,8 @@
+---
+- name: "change the shell for a command"
+  hosts: localhost
+  tasks:
+    - name: "use /bin/bash instead of default sh"
+      shell: ps
+      args:
+        executable: /bin/bash
