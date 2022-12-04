@@ -1,0 +1,9 @@
+---
+- name: "use warn parameter of shell module to stop warning"
+  hosts: localhost
+  tasks:
+  # Disabling warnings
+  - name: Using curl to connect to a host via SOCKS proxy (unsupported in uri). Ordinarily this would throw a warning.
+    shell: curl --socks5 localhost:9000 http://www.ansible.com
+    args:
+      warn: no
