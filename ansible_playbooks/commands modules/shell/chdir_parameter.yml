@@ -1,0 +1,8 @@
+---
+- name: "Change the working directory to Documents/ before executing the command"
+  hosts: localhost
+  tasks:
+    - name: "cd before ls using shell module"
+      shell: ls -la
+      args: 
+        chdir: /home/shubham/Documents
