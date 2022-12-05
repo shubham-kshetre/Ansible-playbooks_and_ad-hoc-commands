@@ -34,3 +34,7 @@
 - To check the service status:
 
 `ansible localhost -m service -a "name=httpd"`
+
+- Use copy module to copy files from local to remote machine:
+
+`ansible remoteserver -m copy -a "src=~/Documents dest=/home/user/ owner=user group=user mode=777"`
