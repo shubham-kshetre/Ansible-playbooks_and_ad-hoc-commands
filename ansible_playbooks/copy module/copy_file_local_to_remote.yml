@@ -4,8 +4,9 @@
   tasks:
     - name: copy files using copy modules to remote server
       become: yes
-      srv: ~/Documents
-      dest: /home/user
-      owner: user #Owner of the file at the destination server once copied
-      group: user #Group of the file at the destination server once copied
-      mode: 777   #Permission of the file after copying
+      copy:
+        src: ~/Documents
+        dest: /home/user
+        owner: user #Owner of the file at the destination server once copied
+        group: user #Group of the file at the destination server once copied
+        mode: 777   #Permission of the file after copying
