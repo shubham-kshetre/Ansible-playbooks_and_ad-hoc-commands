@@ -1,0 +1,7 @@
+---
+- name: "run script on remote server"
+  hosts: localhost
+  tasks:
+    - name: "use script module"
+      script: ./find_non_tldr.sh
+      
