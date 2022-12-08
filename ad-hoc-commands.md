@@ -38,3 +38,7 @@
 - Use copy module to copy files from local to remote machine:
 
 `ansible remoteserver -m copy -a "src=~/Documents dest=/home/user/ owner=user group=user mode=777"`
+
+- To run script on remote machine using script module:
+
+`ansible localhost -m script -a ./helloWorld.sh -v`
