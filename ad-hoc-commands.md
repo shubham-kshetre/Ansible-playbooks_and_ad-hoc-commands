@@ -42,3 +42,7 @@
 - To run script on remote machine using script module:
 
 `ansible localhost -m script -a ./helloWorld.sh -v`
+
+- ad hoc command to list nfs mounts:
+
+`ansible testservers -m shell -a 'df -h -T|grep -i nfs'  -i ansible_hosts`
