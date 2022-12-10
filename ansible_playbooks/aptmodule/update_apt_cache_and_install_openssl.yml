@@ -1,0 +1,10 @@
+---
+- name: "$ apt update && apt install openssl"
+  hosts: servers
+  become: yes
+  tasks:
+    - name: update cache and install openssl
+      apt:
+        name: openssl
+        status: present
+        update_cache: yes

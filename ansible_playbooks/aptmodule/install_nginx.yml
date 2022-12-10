@@ -1,0 +1,11 @@
+---
+- name: "Installation of NGINX using apt module"
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: apt install nginx
+      apt:
+        name: nginx
+        state: present
+
+

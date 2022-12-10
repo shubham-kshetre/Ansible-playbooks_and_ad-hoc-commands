@@ -1,0 +1,10 @@
+---
+- name: Install NGINX using apt -get
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: install nginx using apt-get
+      apt:
+        name: nginx
+        status: present
+        force_apt_get: yes
