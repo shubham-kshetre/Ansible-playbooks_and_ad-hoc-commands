@@ -1,0 +1,9 @@
+---
+- name: remove any package
+  hosts: servers
+  become: yes
+  tasks:
+    - name: remove packages using ansible apt
+      apt:
+        name: apache2
+        status: absent

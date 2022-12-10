@@ -1,0 +1,9 @@
+---
+- name: install any package using apt
+  hosts: servers
+  become: yes
+  tasks:
+    - name: "Install Apache"
+      apt: 
+        name: apache2
+        status: present
