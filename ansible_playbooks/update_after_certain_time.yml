@@ -1,0 +1,12 @@
+---
+- name: update cache if it is older than certain time
+  hosts: servers
+  become: yes
+  tasks:
+    - name: apt update after 1 hour
+      register: updatesys
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+
