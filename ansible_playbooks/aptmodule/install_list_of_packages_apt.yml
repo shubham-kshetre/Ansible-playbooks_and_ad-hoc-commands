@@ -1,0 +1,16 @@
+---
+- name: install multiple packages in one go
+  hosts: servers
+  become: yes
+  tasks:
+    - name: use apt module and pass list of packages
+      apt:
+        update_cache: yes
+        name: 
+          - nginx
+          - docker
+          - firewalld
+          - mysql
+          - php
+        state: present
+
