@@ -46,3 +46,8 @@
 - ad hoc command to list nfs mounts:
 
 `ansible testservers -m shell -a 'df -h -T|grep -i nfs'  -i ansible_hosts`
+
+- Find all the log files older than 30 days with Ansible Find:
+
+`ansible appgroup -i ansible_hosts -m find -a "paths='/var/log' file_type=file patterns='*.log' age_stamp=mtime age=30d"`
+
