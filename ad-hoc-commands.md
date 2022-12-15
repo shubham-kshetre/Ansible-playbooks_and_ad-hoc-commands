@@ -51,3 +51,6 @@
 
 `ansible appgroup -i ansible_hosts -m find -a "paths='/var/log' file_type=file patterns='*.log' age_stamp=mtime age=30d"`
 
+- Recursively find the files by Size using Ansible Find:
+
+`ansible appgroup -i ansible_hosts -m find -a "paths='/var/log' file_type=file patterns='*.log' size=10m"`
