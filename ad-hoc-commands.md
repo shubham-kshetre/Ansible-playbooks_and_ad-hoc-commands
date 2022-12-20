@@ -53,4 +53,4 @@
 
 - Recursively find the files by Size using Ansible Find:
 
-`ansible appgroup -i ansible_hosts -m find -a "paths='/var/log' file_type=file patterns='*.log' size=10m"`
+`ansible localhost -m find -a "paths='/var/log' file_type=file patterns='*.log' size=100m"`
