@@ -1,0 +1,15 @@
+---
+- name: Ansible Find Example
+  hosts: testserver
+  tasks:
+   - name : Find files bigger than 100mb in size
+     become: true
+     find:
+       paths: /
+       file_type: file
+       size: 100m
+       recurse: yes
+     register: output
+
+   - debug: var=item.path
+     with_items: "{{ output.files }}"
